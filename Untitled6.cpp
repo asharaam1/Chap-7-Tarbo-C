@@ -54,4 +54,5 @@ int main() {
     return 0;
 }
    
-    
+   
+//Code run in Dev-C++

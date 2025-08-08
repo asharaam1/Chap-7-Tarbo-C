@@ -13,4 +13,4 @@ main()
   printf("x is %d, y is %d.\n", x, y);
 }
   
-
+//Code run in Dev-C++

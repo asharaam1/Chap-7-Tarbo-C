@@ -9,3 +9,5 @@ main()
  for (dex=0; dex<5; dex++) 
     printf("%d\n", nums [dex]);
 } 
+
+//Code run in Dev-C++
