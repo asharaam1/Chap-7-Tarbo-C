@@ -1,7 +1,8 @@
 /* double.c */
 /* show use of pointers on 2-dimentional arrays */
-#define rows 4
-#define cols 5
+#include <stdio.h>
+#define ROWS 4
+#define COLS 5
 main()
 {
 	static int table[ROWS][COLS]= { {13, 15, 17, 19, 21}, 
@@ -17,7 +18,10 @@ main()
 	for(j=0; j<ROWS; j++)    /* print out array */
 	{
 		for(k=0; k<COLS; k++)
-		  printf("%d ", *(*(table+j)+k);
+		  printf("%d ", *(*(table+j)+k));
 		printf("\n");
 	}
+	return 0;
 }
+
+// code run

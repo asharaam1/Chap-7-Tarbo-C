@@ -1,6 +1,9 @@
 /* move.c */
 /* show imagge on screen */
-#define ROWS 4
+#include <stdio.h>
+#include <conio.h> /* For clrscr */
+#include <dos.h>   /* For delay */
+#define ROWS 10
 #define COLS 5
 main()
 {
@@ -18,7 +21,7 @@ main()
 			{ 0,	0,		0,		0,		0	},
 			{ 0,	0,		0,		0,		0	},
 			{ 0,	0,		0,		0,		0	},
-			{ 0,	0,		'\x1E' 	0,		0	},
+			{ 0,	0,		'\x1E', 	0,		0	},
 			{ 0,	'\x1E',	'\xDB',	'\x1E',	0	},
 			
 		};
@@ -28,21 +31,23 @@ main()
 		
 	for(count=0; count<ROWS; count++)      /* set up pointers */
 	
-	   *(ptr+count)  = *(ptr+count);
+	   *(ptr+count)  = *(pict+count);
 	   
 	for(count=0; count<ROWS-1; count++)
 		{
 			for(j=0; j<ROWS; j++)      // print rocket
 			{
 				for(k=0; k<COLS; k++)
-					printf("%c", *(*(ptr+j)+k);
-					printf("%c", \n);
+					printf("%c", *(*(ptr+j)+k));
+					printf("%c", "\n");
 			}
-		print("%s\n", gnd);       // print ground
+		printf("%s\n", table);       // print ground
 		
 		temp = *ptr;       // rotate pointer
 		for(j=0; j<ROWS-1; j++)
 			*(ptr+j) = *(ptr+j+1);
-		*(ptr+j-1) = temp;
+		*(ptr+ROWS-1) = temp;
 		}   
 }
+
+// code run
